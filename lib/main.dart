@@ -22,6 +22,15 @@ class NetflixApp extends StatelessWidget {
 }
 
 class NetflixHomePage extends StatelessWidget {
+
+  final List<String> trendingImages = [
+    'https://occ-0-1918-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXPLxcwwgSNJysBcgsCdT4vAyZfKaTiCyAGLWFj9ItBrSY6i7qTIwBs5hP4FV4CLeQlMCrGGWRc4GrmKgR5VcFg7iCyQIQv6enzMGjYO6Y6n2xR-ELvttE4fmIO9CZiWI08l.webp?r=b1e',
+    'https://occ-0-1918-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABccLLY3yUDRTmNyyHGyVBbIedubZ61qh3JkZz0r7NbiYW8K9Jx5EwJESkW-FkqqxjOww9ebJoPWPtS_HBcdZ15i6ndrdJZtonyY.webp?r=f9d&quot',
+    'https://occ-0-1918-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeiCBDanu3Qu7KHnY8Rlc0rLhvJ2XfUgHD3h9k83ZXq_cnnCaz6QUiwQbRvFicza7DYrZs0Fnqid-3u_6XvpEzhvVOIZ7R-TcjT6OuKogXqYYzzhhgFt68NA25aPdU7v9LeY.webp?r=ca4&quot',
+    'https://occ-0-1918-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQL-_6E7XNfj2ZqUCrB-O6WWzEnsG41JDuiLNVmXWYTo-FZHwpdn0wjNqTQLy6Djah3dW5FB1RmCmyi0Git_bXJGCVBRDuVki3v5qUUgCil1QaIb4bTo_qNbgiRRfAIvv9qr.webp?r=c3a&quot',
+    'https://occ-0-1918-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbKjhaqQ38F0c6WgZxjHdP9R1S13MHeFmVaAIpXvBl4FYBho2VNu3ddAV-zG4IkI29bkt4rT7w2-SWy3FcaEAFraO-uELfqIAIZZT8zpYEQzDH0Lb4op9aj4bXpxSQFZrD8a.webp?r=fa7&quot',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -209,7 +218,7 @@ class NetflixHomePage extends StatelessWidget {
             height: 200,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: 5,
+              itemCount: trendingImages.length,
               itemBuilder: (context, index) {
                 return Container(
                   width: 120,
@@ -221,7 +230,7 @@ class NetflixHomePage extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             image: DecorationImage(
-                              image: NetworkImage('https://occ-0-1918-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXPLxcwwgSNJysBcgsCdT4vAyZfKaTiCyAGLWFj9ItBrSY6i7qTIwBs5hP4FV4CLeQlMCrGGWRc4GrmKgR5VcFg7iCyQIQv6enzMGjYO6Y6n2xR-ELvttE4fmIO9CZiWI08l.webp?r=b1e&quot;'),
+                              image: NetworkImage(trendingImages[index]),
                               fit: BoxFit.cover,
                             ),
                           ),
